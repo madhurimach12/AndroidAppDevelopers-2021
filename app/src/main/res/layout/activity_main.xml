@@ -1,18 +1,173 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="#22223335"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
 
-    <TextView
+    <RelativeLayout
+        android:layout_width="151dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="24dp"
+            android:layout_height="21dp"
+            app:srcCompat="?attr/actionModeCloseDrawable" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="211dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/border"
+        android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="63dp"
+                android:layout_height="43dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="27dp"
+                app:srcCompat="@drawable/aadhar" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="255dp"
+                android:layout_height="38dp"
+
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="28dp"
+                android:layout_marginRight="28dp"
+                android:layout_toStartOf="@+id/imageView2"
+                android:layout_toLeftOf="@+id/imageView2"
+                android:fontFamily="@font/antic"
+                android:text="Enter your Aadhar Number"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="normal|bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+            <EditText
+                android:id="@+id/editTextNumber1"
+                android:layout_width="100dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginLeft="22dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_toStartOf="@+id/editTextNumber2"
+                android:layout_toLeftOf="@+id/editTextNumber2"
+                android:background="@drawable/border2"
+                android:ems="10"
+                android:fontFamily="@font/bitter"
+                android:gravity="center"
+                android:hint="1 2 3 4"
+                android:inputType="number"
+                android:maxLength="4"
+                android:textSize="25sp" />
+
+            <EditText
+                android:id="@+id/editTextNumber2"
+                android:layout_width="100dp"
+                android:layout_height="52dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="22dp"
+                android:layout_marginEnd="145dp"
+                android:layout_marginRight="145dp"
+                android:background="@drawable/border2"
+                android:ems="10"
+                android:fontFamily="@font/bitter"
+                android:gravity="center"
+                android:hint="5 6 7 8"
+
+                android:inputType="number"
+                android:maxLength="4"
+                android:textSize="25sp" />
+
+            <EditText
+                android:id="@+id/editTextNumber3"
+                android:layout_width="100dp"
+                android:layout_height="52dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="22dp"
+                android:layout_marginEnd="27dp"
+                android:layout_marginRight="27dp"
+                android:background="@drawable/border2"
+                android:ems="10"
+                android:fontFamily="@font/bitter"
+                android:gravity="center"
+                android:hint="9 0 1 2"
+                android:inputType="number"
+                android:maxLength="4"
+                android:textSize="25sp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="DigiLocker uses Aadhar OTP implementation to verify users and fetch original documents."
+            android:textSize="16dp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:layout_width="128dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/border3"
+            android:text="@string/next_id"
+            android:textAllCaps="false" />
+
+        <TextView
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_margin="30dp"
+            android:text="@string/bottom_text" />
+
+    </RelativeLayout>
+</LinearLayout>

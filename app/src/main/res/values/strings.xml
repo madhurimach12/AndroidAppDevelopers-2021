@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">InternshipProgram</string>
+    <string name="app_name">Aadhar</string>
+    <string name="next_id">Next</string>
+    <string name="bottom_text">Don\'t want to use Aadhaar? </string>
 </resources>
