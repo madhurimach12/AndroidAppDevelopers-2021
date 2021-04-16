@@ -1,4 +1,4 @@
-package com.android.internshipprogram;
+package com.android.internshipprogram.j;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,16 +7,18 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.android.internshipprogram.R;
+
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class DL1MainActivity extends AppCompatActivity {
     Spinner spinner;
     ArrayList state = new ArrayList();
     TextView tv_name,tv_dob;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.group_j_activity_main);
         spinner = findViewById(R.id.spinner);
         tv_name = findViewById(R.id.tv_name);
         tv_dob = findViewById(R.id.tv_dob);
