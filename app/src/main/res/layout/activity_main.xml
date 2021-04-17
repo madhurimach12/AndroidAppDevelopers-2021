@@ -7,21 +7,26 @@
     android:background="#C5BEB0"
     tools:context=".MainActivity">
 
-    <Toolbar
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="70dp"
+
+
         android:gravity="center"
-        android:id="@+id/toolbar"
-        android:background=""
-        >
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
         <androidx.appcompat.widget.AppCompatImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="C5BEB0"
-            android:src="@drawable/ic_baseline_arrow_back_24"
-            ></androidx.appcompat.widget.AppCompatImageButton>
+            android:background="#C5BEB0"
+            android:src="@drawable/ic_baseline_arrow_back_24">
 
-    </Toolbar>
+        </androidx.appcompat.widget.AppCompatImageButton>
+
+    </androidx.appcompat.widget.Toolbar>
 
     <RelativeLayout
         android:id="@+id/linearLayout"
@@ -42,7 +47,7 @@
             android:layout_marginRight="10dp"
             app:cardCornerRadius="20dp"
             app:cardUseCompatPadding="true"
-            android:layout_width="wrap_content"
+            android:layout_width="384dp"
             android:layout_height="wrap_content">
 
             <LinearLayout
@@ -57,7 +62,7 @@
                 >
 
                 <RelativeLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
 
                     android:layout_height="wrap_content">
 
@@ -80,16 +85,16 @@
                         android:src="@drawable/aadhar"></ImageView>
                 </RelativeLayout>
 
-                <RelativeLayout
-                    android:layout_width="wrap_content"
+                <com.google.android.flexbox.FlexboxLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp">
 
                     <EditText
                         android:id="@+id/first_four_digit"
-                        android:layout_width="95dp"
-                        android:layout_height="50dp"
-
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:width="120dp"
                         android:gravity="center"
                         android:background="@drawable/edit_text_border"
                         android:inputType="number"
@@ -98,30 +103,29 @@
 
                     <EditText
                         android:id="@+id/second_four_digit"
-                        android:layout_width="95dp"
-                        android:background="@drawable/edit_text_border"
-
-                        android:layout_height="50dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_toRightOf="@+id/first_four_digit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:width="120dp"
                         android:gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/edit_text_border"
                         android:inputType="number"
                         android:maxLength="4"
+
                         android:textSize="30sp" />
 
                     <EditText
                         android:id="@+id/thired_four_digit"
-                        android:layout_width="95dp"
-                        android:background="@drawable/edit_text_border"
-
-                        android:layout_height="50dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:width="120dp"
                         android:layout_marginLeft="10dp"
-                        android:layout_toRightOf="@+id/second_four_digit"
-                        android:gravity="center"
+                        android:background="@drawable/edit_text_border"
                         android:inputType="number"
                         android:maxLength="4"
+                        android:gravity="center"
                         android:textSize="30sp" />
-                </RelativeLayout>
+                </com.google.android.flexbox.FlexboxLayout>
 
                 <TextView
                     android:layout_width="match_parent"
